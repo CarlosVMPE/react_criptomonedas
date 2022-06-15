@@ -74,7 +74,7 @@ Error generating stack: `+i.message+`
     background-color: #7a7dfe;
     cursor: pointer;
   }
-`,Rm=({setMonedas:e})=>{const[t,n]=K.exports.useState([]),[r,l]=K.exports.useState(!1),[i,o]=Ds("Elige tu Moneda",Nm),[u,s]=Ds("Elige tu Criptomoneda",t);return K.exports.useEffect(()=>{(async()=>{const y=(await(await fetch("https://min-api.cryptocompare.com/data/top/mktcapfull?limit=10&tsym=USD")).json()).Data.map(w=>({id:w.CoinInfo.Name,nombre:w.CoinInfo.FullName}));n(y)})()},[]),he(lf,{children:[r&&j(Tm,{children:"Todos los campos son obligatorios"}),he("form",{onSubmit:m=>{if(m.preventDefault(),[i,u].includes("")){l(!0);return}l(!1),e({moneda:i,criptomoneda:u})},children:[j(o,{}),j(s,{}),i,j(Lm,{type:"submit",value:"Cotizar"})]})]})},Om=Ne.div`
+`,Rm=({setMonedas:e})=>{const[t,n]=K.exports.useState([]),[r,l]=K.exports.useState(!1),[i,o]=Ds("Elige tu Moneda",Nm),[u,s]=Ds("Elige tu Criptomoneda",t);return K.exports.useEffect(()=>{(async()=>{const y=(await(await fetch("https://min-api.cryptocompare.com/data/top/mktcapfull?limit=10&tsym=USD")).json()).Data.map(w=>({id:w.CoinInfo.Name,nombre:w.CoinInfo.FullName}));n(y)})()},[]),he(lf,{children:[r&&j(Tm,{children:"Todos los campos son obligatorios"}),he("form",{onSubmit:m=>{if(m.preventDefault(),[i,u].includes("")){l(!0);return}l(!1),e({moneda:i,criptomoneda:u})},children:[j(o,{}),j(s,{}),j(Lm,{type:"submit",value:"Cotizar"})]})]})},Om=Ne.div`
   color: #fff;
   font-family: "Lato", sans-serif;
   display: flex;
