@@ -74,7 +74,6 @@ const Formulario = ({ setMonedas }) => {
       <form onSubmit={handleSubmit}>
         <SelectMonedas />
         <SelectCriptoMonedas />
-        {moneda}
         <InputSubmit type="submit" value="Cotizar" />
       </form>
     </>
